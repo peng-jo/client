@@ -1,0 +1,55 @@
+$tablet: 1023px;
+$elementSpace: 15px;
+
+.canvas {
+    margin: 0 auto;
+    & > * {
+        margin: $elementSpace auto;
+    }
+    @media (max-width: $tablet) {
+        & > * {
+            margin: 5px auto;
+        }
+    }
+    canvas {
+        display: block;
+        touch-action: none;
+    }
+
+    .colorpicker {
+        box-sizing: border-box;
+        margin-top: $elementSpace;
+        padding: 10px;
+        background-color: #e5e5e5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $tablet) {
+            margin-top: 10px;
+        }
+        .pickerContainer {
+            input {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: none;
+                margin: 2px;
+                @media (max-width: $tablet) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .icon {
+        font-size: 3em;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: $tablet) {
+    h1 {
+        margin: 10px 0;
+    }
+}
